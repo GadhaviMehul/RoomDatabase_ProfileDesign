@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mehul Room 2024</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_select_gender">Please Select Gender</string>
+    <string name="error_select_image">Please Select Image</string>
+    <string name="error_select_date">Please Select Date</string>
+    <string name="dont_have_account">Don\'t have an Account? Sign up</string>
+</resources>

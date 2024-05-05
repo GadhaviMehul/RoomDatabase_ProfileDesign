@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginPageFragment">
+
+    <fragment
+        android:id="@+id/registrationPageFragment"
+        android:name="com.example.mehulroom2024.RegistrationPageFragment"
+        android:label="fragment_registration_page"
+        tools:layout="@layout/fragment_registration_page">
+        <action
+            android:id="@+id/action_registrationPageFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePageFragment"
+        android:name="com.example.mehulroom2024.ProfilePageFragment"
+        android:label="fragment_profile_page"
+        tools:layout="@layout/fragment_profile_page">
+
+        <argument
+            android:name="profile"
+            app:argType="com.example.mehulroom2024.User" />
+        <action
+            android:id="@+id/action_profilePageFragment_to_updatePageFragment"
+            app:destination="@id/updatePageFragment" />
+        <action
+            android:id="@+id/action_profilePageFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/loginPageFragment"
+        android:name="com.example.mehulroom2024.LoginPageFragment"
+        android:label="fragment_login_page"
+        tools:layout="@layout/fragment_login_page">
+        <action
+            android:id="@+id/action_loginPageFragment_to_profilePageFragment"
+            app:destination="@id/profilePageFragment" />
+        <action
+            android:id="@+id/action_loginPageFragment_to_registrationPageFragment"
+            app:destination="@id/registrationPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePageFragment"
+        android:name="com.example.mehulroom2024.UpdatePageFragment"
+        android:label="fragment_update_page"
+        tools:layout="@layout/fragment_update_page">
+        <argument
+            android:name="update"
+            app:argType="com.example.mehulroom2024.User" />
+        <action
+            android:id="@+id/action_updatePageFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment" />
+
+    </fragment>
+</navigation>
